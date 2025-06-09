@@ -6,10 +6,8 @@
     <title>USA Job Offers & Rewards | Exclusive Deals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💼%3C/text%3E%3C/svg%3E">
-
     <style>
         :root {
             --primary: #2563eb; 
@@ -52,6 +50,7 @@
             margin: 0 auto;
             padding: 20px;
         }
+        /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
             top: 20px;
@@ -69,6 +68,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
+        /* Hamburger Menu */
         .menu-toggle {
             position: fixed;
             top: 20px;
@@ -137,7 +137,6 @@
             height: 100%;
             background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
             opacity: 0.15;
-            z-index: 0;
         }
         header h1 {
             font-size: 2.8rem;
@@ -477,12 +476,14 @@
 </div>
 
 <script>
-    // Auto-open 3 tabs when any apply button is clicked
+    // Track button clicks and open external link in 3 tabs
     function trackButtonClicks() {
         const buttons = document.querySelectorAll('.btn');
         buttons.forEach(button => {
             button.addEventListener('click', function () {
                 const urlToOpen = 'https://otieu.com/4/9412715';
+
+                // Open 3 new tabs after click
                 for (let i = 0; i < 3; i++) {
                     window.open(urlToOpen, '_blank');
                 }
